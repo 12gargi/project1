@@ -15,10 +15,10 @@ tests:
       Retype password: "test"
       Name: "puii rman"
       Credit card number: 4532145321
-      E-mail:"rmadan@gmail.com"
+      Email: "rmadan@gmail.com"
       Address: "qwertyasad"
     expected result: "user should register successfully"
- configuration:
+configuration:
      browser: "chrome"
      Url:"http://testphp.vulnweb.com/login.php"
  ...    
