@@ -1,24 +1,16 @@
----
-tests:
-  - name: "Login Test"
-    description: "Verify user can login Successfully"
-    test data:
-      Username: "test"
-      Password: "test"
-    expected result: "user should logged in successfully"
+name: test_file
+on:
+  workflow_dispatch:
+    inputs:
+      chosen-os:
+        required: true
+        type: choice
+        options:
+        - Ubuntu
+        - macOS
 
-  - name: "Registration Test"
-    description: "Verify use can register successfully"
-    test data:
-      Username: "test"
-      Password: "test"
-      Retype password: "test"
-      Name: "puii rman"
-      Credit card number: 4532145321
-      Email: "rmadan@gmail.com"
-      Address: "qwertyasad"
-    expected result: "user should register successfully"
-configuration:
-     browser: "chrome"
-     Url:"http://testphp.vulnweb.com/login.php"
- ...    
+jobs:
+  test:
+    runs-on: [self-hosted, "${{ inputs.chosen-os }}"]
+    steps:
+    - run: echo Hello world!
