@@ -1,0 +1,24 @@
+---
+tests:
+  - name: "Login Test"
+    description: "Verify user can login Successfully"
+    test data:
+      Username: "test"
+      Password: "test"
+    expected result: "user should logged in successfully"
+
+  - name: "Registration Test"
+    description: "Verify use can register successfully"
+    test data:
+      Username: "test"
+      Password: "test"
+      Retype password: "test"
+      Name: "puii rman"
+      Credit card number: 4532145321
+      E-mail:"rmadan@gmail.com"
+      Address: "qwertyasad"
+    expected result: "user should register successfully"
+ configuration:
+     browser: "chrome"
+     Url:"http://testphp.vulnweb.com/login.php"
+ ...    
